@@ -35,12 +35,7 @@ module Onelogin
 
       def create_unauth_xml_doc(settings, params)
 
-<<<<<<< HEAD
-        #time = Time.new().strftime("%Y-%m-%dT%H:%M:%S") NO STANDARD
         time = Time.now.utc.strftime("%Y-%m-%dT%H:%M:%SZ")
-=======
-	time = Time.now.utc.strftime("%Y-%m-%dT%H:%M:%SZ")
->>>>>>> 41762ac... Change time logoutrequest.rb to UTC Format
 
         request_doc = REXML::Document.new
         root = request_doc.add_element "samlp:LogoutRequest", { "xmlns:samlp" => "urn:oasis:names:tc:SAML:2.0:protocol" }
